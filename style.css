@@ -1,0 +1,140 @@
+body {
+  font-family: 'Red Hat Mono', monospace;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.half-height {
+  height: 50vh;
+}
+
+.bg-custom-blue {
+  background-color: #222fde;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+#container6 {
+  margin-bottom: -9rem;
+  padding-bottom: 10rem;
+}
+
+#container5 {
+  min-height: 100vh;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+
+#container6,
+#container7 {
+  padding-top: 15rem;
+  clip-path: polygon(0 6.1%, 100% 0, 100% 100%, 0 100%);
+}
+
+#container6 .inner-container,
+#container7 .inner-container {
+  width: 85%;
+  color: white;
+  text-align: justify;
+}
+
+#container6 p,
+#container7 p {
+  margin-bottom: 5rem;
+  font-size: 1.6em;
+  line-height: 2.5;
+}
+
+@media (max-width: 767px) {
+  #container5 {
+    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+    min-height: 75vh !important;
+  }
+
+  #container7 {
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+    padding-top: 4rem;
+  }
+
+  #container6 {
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+    padding-top: 5rem;
+  }
+
+  #container6 .inner-container,
+  #container7 .inner-container {
+    width: 85%;
+  }
+
+  #container6 p,
+  #container7 p {
+    font-size: 1em;
+    line-height: 2;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    text-align: left;
+  }
+
+  #preloader {
+    display: none !important;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-12rem);
+  }
+}
+
+@media (min-width: 768px) {
+  #container2 {
+    animation: bounce 2s 1;
+  }
+
+  .funkytitle {
+    max-width: 50%;
+  }
+}
+
+
+.vertical-video {
+  display: none;
+}
+
+
+@media (orientation: portrait) {
+  .horizontal-video {
+    display: none;
+  }
+
+  .vertical-video {
+    display: block;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>KEDI - WHAT THE FUNK!</title>
+  <meta
+    content="The funk-faced company, innovates at the intersection of the physical and digital realms. Join us as we reshape design norms and venture into new territories."
+    name="description" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;400;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="m-0 p-0">
+  <div id="preloader"
+    style="width: 100vw; height: 100vh; position: fixed; top: 0px; left: 0px; z-index: 9999; background-color: white; display: flex; align-items: center; justify-content: center;">
+    <div style="font-size: 2rem;"><img src="images/larping.gif" /></div>
+  </div>
+  <div class="full-height sticky bg-custom-blue flex items-center justify-center" id="container1">
+    <img alt="Image 1" class="w-3/4 mx-auto" src="images/keditype.png" />
+  </div>
+  <div class="half-height sticky bg-black flex items-center justify-center" id="container2">
+    <img alt="Image 2" class="w-3/4 md:w-1/4 mx-auto" src="images/equation.png" />
+  </div>
+  <div class="full-height sticky bg-white flex items-center justify-center" id="container3">
+    <img alt="FUNK FUNK FUNK FUNK FUNK FUNK" class="w-4/5 sm:w-3/5 md:w-2/5 mx-auto" id="rotatingImage"
+      src="images/funk/funk-1.png" />
+  </div>
+  <div class="full-height sticky bg-black flex flex-col items-center justify-center" id="container4">
+    <img alt="Image 4" class="hidden md:block w-4/4 mx-auto" src="images/funkface.png" />
+    <img alt="Image 4" class="md:hidden w-4/4 mx-auto" src="images/funkface-m.png" />
+  </div>
+  <div class="sticky bg-yellow-500 flex items-center justify-center" id="container5">
+    <video autoplay loop muted playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+      <source src="images/panik.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="full-height bg-black flex flex-col items-center px-5 justify-center" id="container6">
+    <img alt="About Kedi" class="funkytitle mx-auto" src="images/waboutkedi.png" />
+    <div class="inner-container mx-auto text-center">
+      <p class="mb-5">On an offbeat morning, KEDI.DESIGN, after serving nearly a decade at the forefront of digital
+        service design, delivering state-of-the-art UX design and machine learning services to top telecom operators,
+        airlines, banks, and entertainment services across Turkey and the globe, awoke from a surreal dream. Suddenly,
+        it was no longer just KEDI.DESIGN, it was a larger, much grander cat, and in a state of bemused disbelief, it
+        roared: WTF!</p>
+      <p class="mb-5">Its familiar digital fabric was now replaced with a vibrant, tactile fur that defied convention.
+        Its binary gaze was now infused with a captivating blend of audacity and curiosity. The transformation had
+        tipped the scales of normality.</p>
+      <p class="mb-5">After a seemingly warp-speed hiatus of about two years, KEDI.WTF found itself nurturing two
+        groundbreaking ventures: VINYLZ, an innovative company reshaping the boundaries between the physical and digital
+        realms with its collectible designer toys, and M4RS, a video game studio fearlessly carving new narratives in
+        the web3 gaming landscape.</p>
+      <p class="mb-5">Every day, this unconventional feline entity embraced its Kafkaesque reality, living in an
+        unpredictable symphony of absurdity and excitement. The metamorphosis it had undergone was more than just a
+        physical change - it was a shift in its very existence. In this playground where digital and physical realms
+        intertwined, KEDI.WTF was ready to leap, explore, and roar into new territories. The extraordinary saga of
+        KEDI.WTF was only just beginning.</p>
+    </div>
+  </div>
+  <div class="full-height bg-custom-blue flex flex-col items-center justify-center px-5 text-white" id="container7">
+    <img alt="funktion:kedi" class="funkytitle mx-auto" src="images/funktion.png" />
+    <div class="inner-container mx-auto text-center">
+      <p class="mb-5">KEDI.WTF, in its Kafkaesque reality, is on a constant prowl for the audacious, the defiant, the
+        audibly audible game-changers that disrupt the silence of conformity. Are you the disruptor, the trailblazer,
+        the challenger we're on the lookout for?</p>
+      <p class="mb-5">In the untamed playground of KEDI.WTF, every maverick move gets its moment. If your audacious
+        angle is as jaw-droppingly jazzy as we foresee, we're ready to fuel the game and let your innovation steal the
+        show. KEDI.WTF might not just offer you our mastery in design and development. We're ready to sponsor the show
+        and let your move rock the spotlight.</p>
+      <p>Ready to drop the beat of your audacious angle? Send your thoughts directly to our inbox at and let's set the
+        stage ablaze together!</p>
+      <p style="text-align: center;"><img alt="Kedi Email" src="images/funkemail.png" /></p>
+    </div>
+  </div>
+  <script>
+    var images = [
+      "images/funk/funk-1.png",
+      "images/funk/funk-2.png",
+      "images/funk/funk-3.png",
+      "images/funk/funk-4.png",
+      "images/funk/funk-5.png",
+      "images/funk/funk-6.png"
+    ];
+
+    function rotateImages() {
+      var i = Math.floor(Math.random() * images.length);
+      document.getElementById('rotatingImage').src = images[i];
+    }
+
+    window.onload = function () {
+      setInterval(rotateImages, 100);
+
+      window.addEventListener('scroll', function () {
+        var container2 = document.getElementById('container2');
+        container2.style.animation = 'none';
+      }, {once: true});
+
+      var preloader = document.getElementById('preloader');
+      preloader.style.display = 'none';
+    };
+  </script>
+</body>
+
+</html>
